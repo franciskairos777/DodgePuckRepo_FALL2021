@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Testing : MonoBehaviour
+public class PlayerController01 : MonoBehaviour
 {
     public int score = 7;
-    public float speed = 10.0f; 
+    public float speed = 10.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
 
-     
 
-        
+
+
+
         Debug.Log("Hello, World");
     }
 
