@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController01 : MonoBehaviour
 {
+    public int[] LottoNumbers = { 1, 2, 3, 4, 5, 6 };
+    public int myNumber;
     public int score = 7;
     public float speed = 10.0f;
     public float xRange;
@@ -13,9 +15,8 @@ public class PlayerController01 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
+        
+        
 
 
         Debug.Log("Hello, World");
@@ -67,6 +68,9 @@ public class PlayerController01 : MonoBehaviour
         //    Debug.Log(Input.GetAxis("Horizontal"));
         //    transform.Translate(Vector2.right * speed * Time.deltaTime);
         //}
+
+        myNumber = LottoNumbers[Random.Range(0, 5)];
+        Debug.Log("My Lotto Number is: " + myNumber);
 
     }
 }

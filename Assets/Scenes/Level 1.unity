@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e88e04cfff7490469583838493fe1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LottoNumbers: 010000000200000003000000040000000500000006000000
+  myNumber: 0
   score: 7
   speed: 35
   xRange: 4.662
