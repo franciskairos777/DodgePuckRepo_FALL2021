@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PuckController : MonoBehaviour
 {
+    public float xRange;
+    public float yRange;
+    //public int[] points = { 7, 5, 1, 0 }
     public int[] direction = { 0, 1, 2, 3 };
     public int moveDirection;
     public float puckSpeed = 5.0f;

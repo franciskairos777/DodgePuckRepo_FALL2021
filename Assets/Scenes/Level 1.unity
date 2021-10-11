@@ -825,7 +825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1195201743228600511, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
       propertyPath: m_Name
-      value: Puck1
+      value: Puck
       objectReference: {fileID: 0}
     - target: {fileID: 8620254412339889093, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
       propertyPath: m_RootOrder

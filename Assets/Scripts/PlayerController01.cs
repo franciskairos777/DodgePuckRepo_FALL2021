@@ -15,7 +15,7 @@ public class PlayerController01 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
         
 
 
@@ -54,11 +54,19 @@ public class PlayerController01 : MonoBehaviour
     {
         Instantiate(Puck,new Vector2(Random.Range(-xRange,xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
 
+        //count how many enemies there are in the scene
+        GameObject[] puckArray;
+        puckArray = GameObject.FindGameObjectsWithTag("Puck");
+        Debug.Log("Puck Count: " + puckArray.Length);
+
+        //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis("Horizontal");
         Debug.Log(moveHorizontal);
 
+        //Store the current vertical input in the float moveVertical.
         float moveVertical = Input.GetAxis("Vertical");
 
+        //Use the two store floats to create a new Vector2 variable movement.
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         transform.Translate(movement * speed * Time.deltaTime);
