@@ -11,11 +11,11 @@ public class PlayerController01 : MonoBehaviour
     public float xRange;
     public float yRange;
     public GameObject Puck;
-
+    public GameObject Blocky; 
     // Start is called before the first frame update
     void Start()
     {
-        //Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+        //Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
         
 
 
@@ -52,7 +52,7 @@ public class PlayerController01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(Puck,new Vector2(Random.Range(-xRange,xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+        //Instantiate(Puck,new Vector2(Random.Range(-xRange,xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
 
         //count how many enemies there are in the scene
         GameObject[] puckArray;
@@ -81,4 +81,6 @@ public class PlayerController01 : MonoBehaviour
         Debug.Log("My Lotto Number is: " + myNumber);
 
     }
+
+    void OnTriggerEnter(Collider other) { }
 }
