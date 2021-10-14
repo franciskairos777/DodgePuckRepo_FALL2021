@@ -15,7 +15,7 @@ public class PlayerController01 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+        Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
         
 
 
@@ -82,5 +82,19 @@ public class PlayerController01 : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other) { }
+   private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Blocky"))
+            
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Hit Blocky!");
+        }
+    
+    
+    
+    
+    }
+
+
 }
