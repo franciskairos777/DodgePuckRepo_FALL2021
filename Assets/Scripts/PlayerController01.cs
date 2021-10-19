@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController01 : MonoBehaviour
 {
     public int[] LottoNumbers = { 1, 2, 3, 4, 5, 6 };
     public int myNumber;
-    public int score = 7;
-    public float speed = 10.0f;
+  //public int score;
+    public float speed;
     public float xRange;
     public float yRange;
     public GameObject Puck;
-    public GameObject Blocky; 
+    public GameObject Blocky;
+    public GameObject scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
         Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
-        
+      //Score = 0;
 
 
         Debug.Log("Hello, World");
     }
 
-    private void LateUpdate()
+    void LateUpdate()
     {
         //Keep Player within xRange (Left and Right sides)
         if (transform.position.x > xRange)
@@ -87,8 +90,11 @@ public class PlayerController01 : MonoBehaviour
         if (other.gameObject.CompareTag("Blocky"))
             
         {
-            Destroy(other.gameObject);
             Debug.Log("Hit Blocky!");
+            Destroy(other.gameObject);
+            Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+          //score += 5;
+          //Debug.Log("Your Score: " + score); 
         }
     
     

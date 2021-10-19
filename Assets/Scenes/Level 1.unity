@@ -178,12 +178,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LottoNumbers: 010000000200000003000000040000000500000006000000
   myNumber: 0
-  score: 7
   speed: 25
   xRange: 4.6
   yRange: 4.5
   Puck: {fileID: 698680888}
   Blocky: {fileID: 8317452139351462299, guid: 68484a05da722a04f9701d84fa5395e1, type: 3}
+  scoreText: {fileID: 1103563729}
 --- !u!212 &8611693
 SpriteRenderer:
   m_ObjectHideFlags: 0
