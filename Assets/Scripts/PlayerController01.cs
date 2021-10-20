@@ -93,8 +93,11 @@ public class PlayerController01 : MonoBehaviour
             Debug.Log("Hit Blocky!");
             Destroy(other.gameObject);
             Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
-          //score += 5;
-          //Debug.Log("Your Score: " + score); 
+            Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+            //score += 5;
+            //Debug.Log("Your Score: " + score); 
+
+            scoreText.GetComponent<ScoreKeeper>().UpdateScore();
         }
     
     
