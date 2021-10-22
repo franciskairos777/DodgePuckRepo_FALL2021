@@ -63,11 +63,12 @@ public class PlayerController01 : MonoBehaviour
         Debug.Log("Puck Count: " + puckArray.Length);
 
         //Store the current horizontal input in the float moveHorizontal.
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        print("moveHorizontal value: " + moveHorizontal);
         Debug.Log(moveHorizontal);
 
         //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
         //Use the two store floats to create a new Vector2 variable movement.
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
