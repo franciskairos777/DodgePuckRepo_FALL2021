@@ -14,6 +14,7 @@ public class PlayerController01 : MonoBehaviour
     public GameObject Puck;
     public GameObject Blocky;
     public GameObject scoreText;
+    public GameObject gameOverText;
 
     // Start is called before the first frame update
     void Start()
@@ -100,7 +101,13 @@ public class PlayerController01 : MonoBehaviour
 
             scoreText.GetComponent<ScoreKeeper>().UpdateScore();
         }
-    
+
+        if (other.gameObject.CompareTag("Puck")) 
+        {
+            gameOverText.SetActive(true);
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+        }
     
     
     
