@@ -63,6 +63,7 @@ public class PlayerController01 : MonoBehaviour
         puckArray = GameObject.FindGameObjectsWithTag("Puck");
         Debug.Log("Puck Count: " + puckArray.Length);
 
+      
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         print("moveHorizontal value: " + moveHorizontal);
@@ -111,6 +112,25 @@ public class PlayerController01 : MonoBehaviour
     
     
     
+    }
+
+    public void NewGame() 
+    {
+        Debug.Log("It's a new game!");
+        //Destroy all Pucks
+        GameObject[] allPucks = GameObject.FindGameObjectsWithTag("Puck");
+        foreach (GameObject dude in allPucks)
+            GameObject.Destroy(dude);
+        //Destroy all Blocky's
+        GameObject[] allBlockys = GameObject.FindGameObjectsWithTag("Blocky");
+        foreach (GameObject dude in allBlockys)
+            GameObject.Destroy(dude);
+
+        transform.position = new Vector2(0, 0);
+        Instantiate(Blocky, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+        Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
+        gameOverText.SetActive(false);
+        Time.timeScale = 1;
     }
 
 
