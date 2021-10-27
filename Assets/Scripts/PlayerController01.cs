@@ -99,7 +99,7 @@ public class PlayerController01 : MonoBehaviour
             Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
             //score += 5;
             //Debug.Log("Your Score: " + score); 
-
+            //scoreText.GetComponent<ScoreKeeper>().scoreValue += 5;
             scoreText.GetComponent<ScoreKeeper>().UpdateScore();
         }
 
@@ -131,6 +131,11 @@ public class PlayerController01 : MonoBehaviour
         Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
         gameOverText.SetActive(false);
         Time.timeScale = 1;
+
+        //Set score to zero
+        scoreText.GetComponent<ScoreKeeper>().scoreValue = 0;
+        scoreText.GetComponent<ScoreKeeper>().UpdateScore();
+        Debug.Log("score: " + scoreText.GetComponent<ScoreKeeper>().scoreValue);
     }
 
 

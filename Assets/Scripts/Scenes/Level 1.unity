@@ -178,10 +178,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LottoNumbers: 010000000200000003000000040000000500000006000000
   myNumber: 0
-  speed: 25
+  speed: 30
   xRange: 28
   yRange: 25.19
-  Puck: {fileID: 698680888}
+  Puck: {fileID: 1195201743228600511, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
   Blocky: {fileID: 8317452139351462299, guid: 68484a05da722a04f9701d84fa5395e1, type: 3}
   scoreText: {fileID: 1103563729}
   gameOverText: {fileID: 1695098975}
@@ -373,11 +373,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9f8a62b8b952243b0556d02520d9d9, type: 3}
---- !u!1 &698680888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1195201743228600511, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
-  m_PrefabInstance: {fileID: 1492843724893015926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &794719415
 GameObject:
   m_ObjectHideFlags: 0
