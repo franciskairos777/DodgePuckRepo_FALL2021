@@ -99,7 +99,7 @@ public class PlayerController01 : MonoBehaviour
             Instantiate(Puck, new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange)), Quaternion.identity);
             //score += 5;
             //Debug.Log("Your Score: " + score); 
-            //scoreText.GetComponent<ScoreKeeper>().scoreValue += 5;
+            scoreText.GetComponent<ScoreKeeper>().scoreValue += 5;
             scoreText.GetComponent<ScoreKeeper>().UpdateScore();
         }
 
