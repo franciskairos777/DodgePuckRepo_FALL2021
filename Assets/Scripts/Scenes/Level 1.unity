@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LottoNumbers: 010000000200000003000000040000000500000006000000
   myNumber: 0
-  speed: 30
+  speed: 34.1
   xRange: 28
   yRange: 25.19
   Puck: {fileID: 1195201743228600511, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
@@ -1567,6 +1567,10 @@ PrefabInstance:
     - target: {fileID: 8620254412339889093, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177932854934600164, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
+      propertyPath: puckSpeed
+      value: 5.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d728fa98147b2e4693247e2667fae05, type: 3}
